@@ -1,10 +1,10 @@
 <template>
-  <h2>Welcome to My Projects</h2>
-  <p>This is My Projects</p>
+  <h2>Welcome to My Workshop</h2>
+  <p>This is My Workshop</p>
   <div class="container">
     <div class="row">
-      <div class="col-6">
-        <h1>Project</h1>
+      <div class="col-12 col-md-6">
+        <h1>Workshop</h1>
         <p>2023</p>
         <div class="card mx-auto text-center" style="width: 18rem">
           <img
@@ -22,8 +22,8 @@
         </div>
       </div>
 
-      <div class="col-6">
-        <h1>Project</h1>
+      <div class="col-12 col-md-6">
+        <h1>Workshop</h1>
         <p>2023</p>
         <div class="card mx-auto text-center" style="width: 18rem">
           <img

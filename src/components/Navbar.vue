@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-text-color-1">
+  <nav class="navbar navbar-expand-lg navbar-text-1">
     <div class="container-fluid">
-      <a class="navbar-brand navbar-text-color-2" href="#home">EARNTADAKORN</a>
+      <a class="navbar-brand navbar-text-2 ms-2" href="#home">Tadakorn</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,31 +19,27 @@
       >
         <ul class="navbar-nav ml-auto flex-nowrap">
           <li class="nav-item align-middle">
-            <a class="nav-link active navbar-text-color-2" href="#about">ABOUT</a>
-            <!-- <router-link to="#about">ABOUT</router-link> -->
-          </li>
-          <li class="nav-item align-middle">
             <a
-              class="nav-link active navbar-text-color-2"
+              class="nav-link active navbar-text-2"
               aria-current="page"
               href="#resume"
-              >RESUME</a
+              >Resume</a
             >
           </li>
           <li class="nav-item align-middle">
-            <a class="nav-link active navbar-text-color-2" href="#projects">PROJECTS</a>
+            <a class="nav-link active navbar-text-2" href="#workshop">Workshop</a>
           </li>
           <li class="nav-item align-middle">
-            <a class="nav-link active navbar-text-color-2" href="#contact">CONTACT</a>
+            <a class="nav-link active navbar-text-2" href="#contact">Contact</a>
           </li>
           <li class="nav-item align-middle">
             <div
               role="button"
               tabindex="0"
               class="nav-link active toggle-icon-text"
-              @click="toggleTheme"
+              @click="themeStore.toggleTheme"
             >
-              <font-awesome-icon v-if="theme === 'dark'" icon="fa-regular fa-moon" />
+              <font-awesome-icon v-if="themeStore.theme === 'dark'" icon="fa-regular fa-moon" />
               <font-awesome-icon v-else icon="fa-regular fa-sun" />
             </div>
           </li>
@@ -54,47 +50,35 @@
 </template>
 
 <script>
+import { themeStore } from '../store/theme.js'
+
 export default {
   data() {
     return {
-      theme: "light",
+      themeStore
     };
   },
-  methods: {
-    toggleTheme() {
-      this.theme = localStorage.getItem("theme");
-      if (this.theme === "light") {
-        this.setTheme("dark");
-      } else {
-        this.setTheme("light");
-      }
-    },
-    setTheme(theme) {
-      localStorage.setItem("theme", theme);
-      this.theme = theme;
-      document.documentElement.className = `${theme}-theme`;
-    },
-    getTheme() {
-      return localStorage.getItem("theme");
-    },
-  },
   mounted() {
-    this.theme = this.getTheme() || this.theme;
+    const initTheme = themeStore.getTheme();
+    themeStore.setTheme(initTheme);
   },
 };
 </script>
 
 <style scoped>
-.navbar-text-color-1 {
-  font-size: 30px;
-  color: black;
+.navbar-brand {
+  color: var(--text-primary-color) !important
 }
 
-.navbar-text-color-2 {
-  font-size: 30px;
-  color: black;
+.nav-link {
+  color: var(--text-primary-color) !important
 }
-.navbar-text-color-2:hover {
-  color: #ffe6e6;
+
+.navbar-toggler-icon {
+  border-color: var(--text-primary-color) !important
+}
+
+.navbar-text-1, .navbar-text-2 {
+  font-size: 30px;
 }
 </style>

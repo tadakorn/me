@@ -1,15 +1,14 @@
 <template>
   <div class="row">
-    <div class="col-6 text-center">
+    <div class="col-12 col-md-6 text-center">
       <div>
         <h1 class="spacing-header">C O N T A C T</h1>
         <br />
-        <p>+669-5882-1251</p>
         <p>tadakorn.nakkaew@gmail.com</p>
-        <p>Chatuchak, Thailand</p>
+        <p>Bangkok, Thailand</p>
       </div>
     </div>
-    <div class="col-6 text-center">
+    <div class="col-12 col-md-6 text-center">
       <div>
         <h1>F O L L O W M E</h1>
         <p>

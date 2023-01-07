@@ -4,8 +4,8 @@
 }
 
 :root {
-  --background-color-primary: #ebebeb;
-  --background-color-secondary: #fafafa;
+  --background-color-primary: #fff;
+  --background-color-secondary: #efefef;
   --accent-color: #cacaca;
   --text-primary-color: #222;
   --element-size: 4rem;

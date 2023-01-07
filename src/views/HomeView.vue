@@ -1,87 +1,43 @@
 <template>
-  <section id="home">
-    <div
-      class="bg-image-cover"
-      style="
-        background-image: url(https://cdn.pixabay.com/photo/2022/11/27/00/44/poppy-7618736_960_720.jpg);
-      "
-    >
-      <div class="text-center text-white p-5">
-        <div class="container">
-          <FirstPage />
-        </div>
-      </div>
+  <section id="home" class="theme-primary">
+    <div class="container first-page">
+      <FirstPage />
     </div>
   </section>
 
-  <section id="about" class="section2">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 text-center">
-          <img
-            alt="Vue logo"
-            class="logo rounded-circle border border-2 shadow p-1 mb-2 bg-body rounded"
-            src="../assets/Earn.jpeg"
-            width="200"
-            height="200"
-          />
-        </div>
-        <div class="col-6 text-center">
-          <AboutMe />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume" class="section3 theme">
+  <section id="resume" class="section2 theme-secondary">
     <div class="container">
       <Resume />
     </div>
   </section>
 
-  <section id="projects" class="theme">
-    <div
-      class="bg-image-cover"
-      style="
-        background-image: url(https://cdn.pixabay.com/photo/2016/03/27/20/00/coffee-1284041_960_720.jpg);
-      "
-    >
-      <div class="text-center text-white p-5">
-        <div class="container">
-          <div><MyProject /></div>
-        </div>
+  <section id="projects" class="theme-primary">
+    <div class="text-center text-white p-5">
+      <div class="container" id="workshop">
+        <div><MyWorkShop /></div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section3">
+  <section id="contact" class="section3 theme-secondary">
     <div class="container" id="contact">
       <ContactMe />
     </div>
   </section>
-
 </template>
 
 <script>
-import MyPortfolio from "../components/MyPortfolio.vue";
-import MyProject from "../components/MyProject.vue";
+import MyWorkShop from "../components/MyWorkShop.vue";
 import FirstPage from "../components/FirstPage.vue";
-import Button from "../components/Button.vue";
 import Resume from "../components/Resume.vue";
-import AboutMe from "../components/AboutMe.vue";
 import ContactMe from "../components/ContactMe.vue";
 
-
 export default {
-  components: { 
-    MyPortfolio,
-    MyProject,
+  components: {
+    MyWorkShop,
     FirstPage,
-    Button,
     Resume,
-    AboutMe,
     ContactMe,
-  
   },
 };
 </script>
@@ -90,15 +46,24 @@ export default {
 .section2 {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: linear-gradient(#fff, #eef5fa);
 }
 .section3 {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.theme {
+.theme-primary {
   background-color: var(--background-color-primary);
   color: var(--text-primary-color);
+}
+
+.theme-secondary {
+  background-color: var(--background-color-secondary);
+  color: var(--text-primary-color);
+}
+
+.first-page {
+  padding-top: 12rem;
+  padding-bottom: 10rem;
 }
 </style>
