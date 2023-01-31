@@ -1,6 +1,6 @@
 <template>
-  <section id="home" class="theme-primary">
-    <div class="container first-page">
+  <section id="home" class="section1 theme-primary first-page">
+    <div class="container">
       <FirstPage />
     </div>
   </section>
@@ -12,8 +12,8 @@
   </section>
 
   <section id="projects" class="theme-primary">
-    <div class="text-center text-white p-5">
-      <div class="container" id="workshop">
+    <div class="text-center p-5">
+      <div class="container workshop-recent" id="workshop">
         <div><MyWorkShop /></div>
       </div>
     </div>
@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style scoped>
+
 .section2 {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -63,7 +64,14 @@ export default {
 }
 
 .first-page {
-  padding-top: 12rem;
-  padding-bottom: 10rem;
+padding-top: 12rem; 
+  padding-bottom: 12rem; 
+
+
+
+}
+.workshop-recent {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 </style>

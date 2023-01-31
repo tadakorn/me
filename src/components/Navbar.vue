@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-text-1">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand navbar-text-2 ms-2" href="#home">Tadakorn</a>
       <button
         class="navbar-toggler"
@@ -17,7 +17,7 @@
         class="collapse navbar-collapse flex-grow-1 justify-content-end align-middle"
         id="navbarTogglerDemo02"
       >
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ms-auto flex-nowrap">
           <li class="nav-item align-middle">
             <a
               class="nav-link active navbar-text-2"

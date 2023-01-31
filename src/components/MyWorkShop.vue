@@ -1,57 +1,50 @@
 <template>
-  <h2>Welcome to My Workshop</h2>
-  <p>This is My Workshop</p>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <h1>Workshop</h1>
-        <p>2023</p>
-        <div class="card mx-auto text-center" style="width: 18rem">
-          <img
-            src="https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_960_720.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </p>
-            <button type="button" class="btn btn-secondary btn-height">Click Here</button>
+    <h2 class="pb-2 border-bottom">Workshop</h2>
+    <!-- Responsive -->
+    <div
+      class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 justify-content-center"
+    >
+      <div class="col">
+        <div
+          class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg click-card"
+          @click="clickProject"
+        >
+          <div class="d-flex flex-column p-4 pb-3 text-white text-shadow-1">
+            <div class="pt-3 mt-5 mb-5">
+              <h3>Crypto Exchange</h3>
+              <h3>Website Clone</h3>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-6">
-        <h1>Workshop</h1>
-        <p>2023</p>
-        <div class="card mx-auto text-center" style="width: 18rem">
-          <img
-            src="https://cdn.pixabay.com/photo/2021/01/21/16/49/books-5937823_960_720.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </p>
-            <button type="button" class="btn btn-secondary">Click Here</button>
+      <div class="col">
+        <div
+          class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('unsplash-photo-1.jpg')"
+        >
+          <div class="d-flex flex-column p-4 pb-3 text-white text-shadow-1">
+            <h3 class="pt-3 mt-5 mb-5">Coming Soon...</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script></script>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    clickProject() {
+      let url = "https://cryptocur.vercel.app/";
+      window.open(url, "_blank").focus();
+    },
+  },
+};
+</script>
 <style scoped>
-h2 {
-  font-size: 30px;
+.click-card {
+  cursor: pointer;
 }
-p {
-  color: #141414;
-}
-
 </style>
