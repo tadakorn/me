@@ -4,7 +4,7 @@
       <img
         alt="Vue logo"
         class="logo rounded-circle border-2 shadow img-fluid"
-        src="../assets/profile.jpeg"
+        src="/img/profile.jpeg"
         width="300"
       />
     </div>
@@ -23,6 +23,7 @@
             'btn-outline-warning': themeStore.theme === 'dark',
             'mt-2': true,
           }"
+          @click="downloadCV"
         >
           Dowload CV <font-awesome-icon icon="fa-solid fa-download" />
         </button>
@@ -32,6 +33,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import { themeStore } from "../store/theme.js";
 
 export default {
@@ -39,6 +41,24 @@ export default {
     return {
       themeStore,
     };
+  },
+  methods: {
+    async downloadCV() {
+      try {
+        const response = await axios.get("/src/assets/resume.pdf", {
+          responseType: "blob",
+        });
+
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "resume.pdf");
+        document.body.appendChild(link);
+        link.click();
+      } catch (error) {
+        console.error(error);
+      }
+    },
   },
 };
 </script>
