@@ -43,7 +43,7 @@ export default {
     };
   },
   methods: {
-    async downloadCV() {
+    downloadCV() {
       try {
         const link = document.createElement("a");
         link.href = cvUrl;
