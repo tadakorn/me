@@ -34,7 +34,7 @@
 
 <script>
 import { themeStore } from "../store/theme.js";
-import cv from "../assets/resume.pdf"
+import cvUrl from "../assets/resume.pdf"
 
 export default {
   data() {
@@ -45,11 +45,9 @@ export default {
   methods: {
     async downloadCV() {
       try {
-        const url = window.URL.createObjectURL(new Blob([cv]));
         const link = document.createElement("a");
-        link.href = url;
+        link.href = cvUrl;
         link.setAttribute("download", "resume.pdf");
-        document.body.appendChild(link);
         link.click();
       } catch (error) {
         console.error(error);
