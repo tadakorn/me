@@ -12,7 +12,7 @@
   </section>
 
   <section id="projects" class="theme-primary">
-    <div class="text-center p-5">
+    <div class="p-5">
       <div class="container workshop-recent" id="workshop">
         <div><MyWorkShop /></div>
       </div>

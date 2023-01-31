@@ -14,10 +14,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
-        class="collapse navbar-collapse flex-grow-1 justify-content-end align-middle"
+        class="collapse navbar-collapse flex-grow-1 justify-content-end align-middle "
         id="navbarTogglerDemo02"
       >
-        <ul class="navbar-nav ms-auto flex-nowrap">
+        <ul class="navbar-nav ms-auto flex-nowrap click-here">
           <li class="nav-item align-middle">
             <a
               class="nav-link active navbar-text-2"
@@ -81,4 +81,5 @@ export default {
 .navbar-text-1, .navbar-text-2 {
   font-size: 30px;
 }
+
 </style>

@@ -6,6 +6,7 @@
 :root {
   --background-color-primary: #fff;
   --background-color-secondary: #efefef;
+  --background-color-workshop: #D0B8A8;
   --accent-color: #cacaca;
   --text-primary-color: #222;
   --element-size: 4rem;
@@ -13,8 +14,9 @@
 
 /* Define styles for the root window with dark - mode preference */
 :root.dark-theme {
-  --background-color-primary: #1e1e1e;
-  --background-color-secondary: #2d2d30;
+  --background-color-primary: rgb(15 23 42);
+  --background-color-secondary: rgb(30 41 59);
+  --background-color-workshop: rgb(51 65 85);
   --accent-color: #3f3f3f;
   --text-primary-color: #ddd;
 }
