@@ -5,23 +5,35 @@
         <h1 class="spacing-header">C O N T A C T</h1>
         <br />
         <p>tadakorn.nakkaew@gmail.com</p>
-        <p>Bangkok, Thailand</p>
+        <p>Chatuchak, Bangkok, Thailand</p>
       </div>
     </div>
     <div class="col-12 col-md-6 text-center">
       <div>
         <h1>F O L L O W M E</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum et
-          impedit eaque, corporis quae quos molestiae dolor reiciendis ab
-          consequatur soluta quasi consequuntur quisquam beatae nisi. Doloremque
-          explicabo beatae perspiciatis.
-        </p>
+        <br />
+        <a href="" @click="clickGithub" class="github-profile"
+          >github.com/tadakorn</a
+        >
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    clickGithub() {
+      let url = "https://github.com/tadakorn";
+      window.open(url, "_blank").focus();
+    },
+  },
+};
+</script>
 
-<style scoped></style>
+<style scoped>
+.github-profile {
+  text-decoration: none;
+  color: var(--text-primary-color);
+}
+</style>
