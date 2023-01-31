@@ -22,7 +22,6 @@
       <div class="col">
         <div
           class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-          style="background-image: url('unsplash-photo-1.jpg')"
         >
           <div class="d-flex flex-column p-4 pb-3 text-white text-shadow-1">
             <h3 class="pt-3 mt-5 mb-5">Coming Soon...</h3>
