@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import axios from "axios";
 import { themeStore } from "../store/theme.js";
+import cv from "../assets/resume.pdf"
 
 export default {
   data() {
@@ -45,11 +45,7 @@ export default {
   methods: {
     async downloadCV() {
       try {
-        const response = await axios.get("/src/assets/resume.pdf", {
-          responseType: "blob",
-        });
-
-        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const url = window.URL.createObjectURL(new Blob([cv]));
         const link = document.createElement("a");
         link.href = url;
         link.setAttribute("download", "resume.pdf");
