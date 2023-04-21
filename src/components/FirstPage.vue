@@ -3,9 +3,9 @@
     <div class="col-12 col-md-6 text-center">
       <img
         alt="Vue logo"
-        class="logo rounded-circle border-2 shadow img-fluid"
+        class="logo shadow img-fluid"
         src="/img/profile.jpeg"
-        width="300"
+        width="200"
       />
     </div>
     <div
